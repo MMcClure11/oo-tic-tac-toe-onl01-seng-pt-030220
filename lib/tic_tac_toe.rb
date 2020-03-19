@@ -109,6 +109,17 @@ class TicTacToe
     end
   end
   
+  def play 
+    until over? 
+      turn 
+    end
+    if won? 
+      puts "Congratulations #{winner}!"
+    elsif draw?
+      puts "Game is tied."
+    end
+  end
+  
 end
 
 #rspec spec/01_tic_tac_toe_spec.rb --f-f
